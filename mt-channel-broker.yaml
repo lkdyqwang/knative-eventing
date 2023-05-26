@@ -298,7 +298,7 @@ spec:
       containers:
         - name: filter
           terminationMessagePolicy: FallbackToLogsOnError
-          image: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/filter@sha256:16782b39892d6b65d8a1df5ab2a2eab6a3c32023c420fbcdbd69e246d126c48b
+          image: registry.cn-hangzhou.aliyuncs.com/yqwang-knative-eventing/knative-eventing:filter-v1.10.0
           readinessProbe: &probe
             failureThreshold: 3
             httpGet:
@@ -422,7 +422,7 @@ spec:
       containers:
         - name: ingress
           terminationMessagePolicy: FallbackToLogsOnError
-          image: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/ingress@sha256:339b84cf4f86fb4cc62920d6840ed650e8932a28283828e644c96c0765ff0c18
+          image: registry.cn-hangzhou.aliyuncs.com/yqwang-knative-eventing/knative-eventing:ingress-v1.10.0
           readinessProbe: &probe
             failureThreshold: 3
             httpGet:
@@ -556,7 +556,7 @@ spec:
       containers:
         - name: mt-broker-controller
           terminationMessagePolicy: FallbackToLogsOnError
-          image: gcr.io/knative-releases/knative.dev/eventing/cmd/mtchannel_broker@sha256:ebc1df57853d77bd0285e6a0f4462dbf1c3590a08cb89c98e8294229866586a6
+          image: registry.cn-hangzhou.aliyuncs.com/yqwang-knative-eventing/knative-eventing:mtchannel_broker-latest
           resources:
             requests:
               cpu: 100m
